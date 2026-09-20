@@ -9,7 +9,7 @@ def find_pattern (sequence, pattern) :
     for i in range(len(sequence)) :
         if sequence[i:i+len(pattern)] == pattern :
             L.append(i + 1)
-    return ("Found", pattern, " : ", A, " times | positions : ", L)
+    return (f"Found {pattern}: {A} times | positions : {L}")
 
 
 codon_dic = {"Phe": ["TTT", "TTC"],
@@ -44,4 +44,4 @@ def find_AA (sequence, RF, AA) :
             L.append(i + 1)
             A = A + 1
         i = i + 3
-    return ("Found", AA, " : ", A, " times | positions : ", L)
+    return (f"Found {AA}: {A} times | positions : {L}")
